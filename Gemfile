@@ -12,8 +12,9 @@ gem 'thin'
 
 gem 'activesupport'
 gem 'activerecord'
-
+gem 'faker'
 gem 'rake'
+
 
 group :test do
   gem 'faker'
