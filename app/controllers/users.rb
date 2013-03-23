@@ -18,6 +18,7 @@ end
 post '/users/signup' do
   @user = User.new(username: params[:username], email: params[:email], password: params[:password])
   unless @user.save
+    @errors = @user.errors.full_messages
     erb :signup
   else
     login
