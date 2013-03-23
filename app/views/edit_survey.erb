@@ -1,6 +1,6 @@
 <div class="survey-container">
   <div class="survey">
-    <h1>Create "<%= @survey.title %>"</h1>
+    <h1>Add questions to "<%= @survey.title %>"</h1>
 
     <div class="all-questions">
       <form action="#" method="post" class="<%= @survey.id %>" id="update">
@@ -16,11 +16,12 @@
       </form>
     </div>
   </div>
+
   <div class="fixed-bar">
     <div class="button-bar">
-      <div class="nav-add floating-link"><a href="#" id="add-question">Add Question</a><br></div>
-
-      <input type="submit" value="Create Survey" class="nav-create floating-link" id="create-survey">
+      <div class="nav-add floating-link"><a href="#" id="add-question">Add Question </a><br><span class="arrow"></span></div>
+      <div class="create">
+      <input type="submit" value="Create Survey" class="nav-create floating-link" id="create-survey"><span class="arrow2"></span></div>
     </div>
   </div>
 </div>
