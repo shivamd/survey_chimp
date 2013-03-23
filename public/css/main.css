@@ -80,27 +80,40 @@ nav#main {
   padding: 20px 0px;
 }
 
-nav#main h1 {
-  font-family: sans-serif;
+nav#main .logo {
   padding-left: 40px;
-  font-size: 3em;
-  color: #3F4944;
-  width: 100%;
+  float: left;
+  width: 400px;
+  height: 60px;
   display:inline;
-  color: transparent;
-  background: url("/images/monkey.png");
-  padding-right: 70px;
 }
+
 
 nav#main ul {
   display:inline;
   float: right;
   padding-right: 40px;
+  margin-right:70px;
 }
 
 nav#main ul li {
   display: inline;
 }
+
+nav#main ul li a {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-decoration: none;
+  padding-right: 10px;
+  font-size: 1.2em;
+  color: #606e67;
+  
+}
+
+nav#main ul li a:hover {
+  color: #c98344;
+} 
 
 .container {
   width: 100%;
@@ -185,6 +198,10 @@ button a {
   font-weight: bold;
   font-variant: small-caps;
   font-size: 1.3em;
+}
+
+button:hover{
+  background-color: #296A7A;
 }
 
 iframe {

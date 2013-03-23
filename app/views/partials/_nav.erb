@@ -1,13 +1,15 @@
 <nav id="main">
-  <h1>Survey Monkey</h1>
+  <div class="logo">
+    <a href="/"><img src ="/images/monkey.png"></a>
+  </div> 
   <ul>   
     <% if session[:id] %>
-      <li><a href="/users/profile">Home</a></li>
-      <li><a href="/users/logout">Logout</a></li>
+      <li><a href="/users/profile">home</a></li>
+      <li><a href="/users/logout">logout</a></li>
     <% else %> 
       <li><a href="/">Home</a></li>
-      <li><a href="/users/login">Login</a></li>
+      <li><a href="/users/login">login</a></li>
     <%end %>
-      <li><a href="/users/signup">Signup</a> </li>
+      <li><a href="/users/signup">signup</a> </li>
   </ul>
 </nav>
