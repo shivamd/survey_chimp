@@ -17,9 +17,10 @@ require 'logger'
 require 'faker'
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'erb'
-
+require 'mini_magick'
 require 'bcrypt'
 
 # Some helper constants for path-centric logic
@@ -33,3 +34,8 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+CarrierWave.configure do |config|
+  config.store_dir = 'images'
+  config.root = "public"
+end

@@ -24,8 +24,9 @@ helpers do
   end
   
   def create_survey(params)
-    @survey = Survey.new(params)
-    @user.surveys << @survey
-    @survey.save
+    @survey = Survey.create(title: params[:title],
+                         description: params[:description],
+                         user_id: @user.id)
+    @survey
   end
 end

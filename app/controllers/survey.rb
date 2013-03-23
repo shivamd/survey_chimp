@@ -3,7 +3,12 @@ get '/survey/new' do
 end
 
 post '/survey/new' do
-  create_survey(params)
+  survey = create_survey(title: params[:title], description: params[:description])
+  
+  File.open('public/images/' + params['filename'][:filename], "w") do |f|
+    f.write(params['filename'][:tempfile].read)
+  end
+  survey.photo = Photo.create(name: params[:filename])
   redirect "/survey/#{@survey.id}/edit"
 end
 
@@ -44,5 +49,3 @@ post '/survey/:survey_id/edit' do
   status 200
   "/".to_json
 end
-
-
