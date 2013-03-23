@@ -1,0 +1,8 @@
+<ul class="stats">
+<% @survey.questions.each do |question| %>
+<h2><%= question.content %></h2> <small>Times answered(<%= question_count(question)%>)</small>
+<% question.choices.each do |choice| %>
+<li><%= choice.content %> - <%=  ((choice.answers.count / question_count(question).to_f)* 100).round(2)%> %</li>
+<% end %>
+<% end %>
+</ul>

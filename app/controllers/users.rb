@@ -17,7 +17,7 @@ get '/users/signup' do
 end
 
 post '/users/signup' do
-  @user = User.new(params)
+  @user = User.new(username: params[:username], email: params[:email], password: params[:password])
   unless @user.save
     erb :signup
   else

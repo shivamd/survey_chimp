@@ -12,7 +12,6 @@ end
 
 post '/survey/submit' do
   submit_answers(params)
-
     # @user = User.find(session[:id])
   erb :submitted
 end
@@ -20,6 +19,11 @@ end
 get '/survey/:survey_id' do
   @survey = Survey.where('id = ?', params[:survey_id]).includes(:questions => [:choices]).first
   erb :survey
+end
+
+get '/survey/:survey_id/stats' do 
+  @survey = Survey.find(params[:survey_id])
+  erb :stats
 end
 
 get '/survey/:survey_id/edit' do
@@ -30,9 +34,6 @@ end
 post '/survey/:survey_id/edit' do
   content_type :json
   @survey = Survey.find(params[:survey_id])
-
-  puts params
-
   params.each do |param|
     if param[0].match(/question*/)
       @current_question = Question.create(:content => param[1], :survey_id => @survey.id)
