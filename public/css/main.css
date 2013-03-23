@@ -6,9 +6,27 @@
   position: relative;
 }
 
+.survey h1 {
+  font-size: 2em;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  color: #3F4944;
+}
+
 .survey {
-  width: 100%;
+  width: 590px;
   z-index: 3;
+  position: relative;
+  float: left;
+}
+
+.fixed-bar {
+  position: fixed;
+  width: 720px;
+  height: 700px;
+  /*border: 1px solid blue;*/
+}
+
+.button-bar {
   position: relative;
 }
 
@@ -18,6 +36,8 @@ form div:first-child a {
 
 .all-questions {
   border: 1px solid black;
+  padding: 0 15px 15px 15px;
+  background-color: #EFEDDF;
 }
 
 .all-questions form {
@@ -27,40 +47,31 @@ form div:first-child a {
 .nav-add {
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 160px;
 }
 
 .nav-create {
   position: absolute;
   right: 0;
-  top: 135px;
+  top: 235px;
+  color: white;
 }
-
-.nav-create {
-  /*margin-top: 275px;  */
-}
-
 
 .floating-link {
   display: block;
   width: 130px;
   height: 50px;
-  overflow: hidden;
+  background-color: #228b9b;
+  border: 0;
+  border-radius: 2px;
+}
+
+.floating-link a {
   color: white;
-  line-height:50px;
-  text-align: center;
-  text-decoration:none;
-  -webkit-border-top-right-radius: 20px;
-  -webkit-border-bottom-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  -moz-border-radius-bottomright: 20px;
-  border-bottom-right-radius: 20px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
-  background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
-  background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
-  background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
-  background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
-  background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+  text-decoration: none;
+  position: absolute;
+  top: 18px;
+  left: 16px;
 }
 
 /*Index page==================================================================*/
@@ -76,6 +87,9 @@ nav#main h1 {
   color: #3F4944;
   width: 100%;
   display:inline;
+  color: transparent;
+  background: url("/images/monkey.png");
+  padding-right: 70px;
 }
 
 nav#main ul {

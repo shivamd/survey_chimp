@@ -1,9 +1,9 @@
 $(document).ready(function() {
-  $('#update').submit(function(e) {
+  $('#create-survey').on('click', function(e) {
     e.preventDefault();
 
-    var data = $(this).serializeArray();
-    var survey = $(this).attr("class");
+    var data = $('#update').serializeArray();
+    var survey = $('#update').attr("class");
     // debugger
     $.ajax({
       url: '/survey/' + survey + '/edit',
