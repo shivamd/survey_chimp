@@ -14,7 +14,6 @@
 
 .survey {
   width: 590px;
-  z-index: 3;
   position: relative;
   float: left;
 }
@@ -26,18 +25,49 @@
   /*border: 1px solid blue;*/
 }
 
+
+.nav-create {
+  position: absolute;
+  /*bottom: 100px;*/
+}
+
 .button-bar {
   position: relative;
+
+}
+
+.arrow { 
+  width: 0; height: 0;  
+  line-height: 0;  
+  border-right: 20px solid transparent;  
+  border-top: 10px solid #006979;  
+  top: 100%;  
+  right: 0;  
+  position: absolute;  
+  z-index: 100;
 }
 
 form div:first-child a {
   display: none;
 }
 
+
+.arrow2 { 
+  width: 0; height: 0;  
+  line-height: 0;  
+  border-right: 20px solid transparent;  
+  border-top: 10px solid #006979;  
+  top: 100%;  
+  right: 0;  
+  position: absolute;  
+  z-index: 3;
+}
+
 .all-questions {
   border: 1px solid black;
   padding: 0 15px 15px 15px;
   background-color: #EFEDDF;
+  position: relative;
 }
 
 .all-questions form {
@@ -46,15 +76,22 @@ form div:first-child a {
 
 .nav-add {
   position: absolute;
-  right: 0;
+  right: 112px;
+  z-index: 10;
   top: 160px;
 }
 
 .nav-create {
-  position: absolute;
-  right: 0;
-  top: 235px;
+  z-index: 3;
   color: white;
+  position: relative;
+}
+
+div.create {
+  position: absolute;
+  top: 235px;
+  left: 478px;
+
 }
 
 .floating-link {
