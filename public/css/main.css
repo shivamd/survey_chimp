@@ -151,11 +151,11 @@ header {
   padding-left:100px;
 }
 
-.inner .right {
+.right {
   float:right;
 }
 
-.inner button {
+button {
   margin-right: 310px;
   background-color: #228b9b;
   width: 20%;
@@ -164,7 +164,7 @@ header {
   border-radius: 2px;
 }
 
-.inner button a {
+button a {
   text-decoration: none;
   color: white;
   font-family: Helvetica;

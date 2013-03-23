@@ -3,8 +3,10 @@ get '/survey/new' do
 end
 
 post '/survey/new' do
-  params[:user_id] = 1
-  survey = Survey.create(params)
+  @user = current_user
+  survey = Survey.new(params)
+  @user.surveys << survey
+  survey.save
   redirect "/survey/#{survey.id}/edit"
 end
 
@@ -12,7 +14,6 @@ post '/survey/submit' do
   submit_answers(params)
 
     # @user = User.find(session[:id])
-
   erb :submitted
 end
 
