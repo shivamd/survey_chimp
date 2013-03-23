@@ -1,1 +1,7 @@
 <h1> Wasssssuuuuppppp!!! <%= @user.username%> </h1>
+
+<ul>
+  <% @surveys.each do |survey| %>
+  <li><a href="/survey/<%= survey.id %>"><%= survey.title %></a></li>
+  <%end%>
+</ul>

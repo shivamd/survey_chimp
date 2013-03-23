@@ -8,6 +8,19 @@ post '/survey/new' do
   redirect "/survey/#{survey.id}/edit"
 end
 
+post '/survey/submit' do
+  submit_answers(params)
+
+    # @user = User.find(session[:id])
+
+  erb :submitted
+end
+
+get '/survey/:survey_id' do
+  @survey = Survey.where('id = ?', params[:survey_id]).includes(:questions => [:choices]).first
+  erb :survey
+end
+
 get '/survey/:survey_id/edit' do
   @survey = Survey.find(params[:survey_id])
   erb :edit_survey
@@ -31,3 +44,5 @@ post '/survey/:survey_id/edit' do
   status 200
   "/".to_json
 end
+
+
