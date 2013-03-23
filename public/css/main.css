@@ -20,7 +20,7 @@
 
 .fixed-bar {
   position: fixed;
-  width: 720px;
+  width: 10px;
   height: 700px;
   /*border: 1px solid blue;*/
 }
@@ -44,7 +44,7 @@
   top: 100%;  
   right: 0;  
   position: absolute;  
-  z-index: 100;
+  /*z-index: 10;*/
 }
 
 form div:first-child a {
@@ -60,7 +60,7 @@ form div:first-child a {
   top: 100%;  
   right: 0;  
   position: absolute;  
-  z-index: 3;
+  /*z-index: 3;*/
 }
 
 .all-questions {
@@ -76,13 +76,14 @@ form div:first-child a {
 
 .nav-add {
   position: absolute;
-  right: 112px;
-  z-index: 10;
+  /*right: 500px;*/
+  left: 480px;
+  /*z-index: 10;*/
   top: 160px;
 }
 
 .nav-create {
-  z-index: 3;
+  /*z-index: 3;*/
   color: white;
   position: relative;
 }
@@ -199,7 +200,7 @@ header {
 }
 
 .inner {
-    display: block;
+  display: block;
   position: relative;
 }
 
