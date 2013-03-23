@@ -115,6 +115,7 @@ div.create {
 
 nav#main {
   padding: 20px 0px;
+  height: 60px;
 }
 
 nav#main .logo {
