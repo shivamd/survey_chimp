@@ -20,15 +20,14 @@ post '/survey/:survey_id/edit' do
   puts params
 
   params.each do |param|
-    if param[0][0] == "q"
+    if param[0].match(/question*/)
       @current_question = Question.create(:content => param[1], :survey_id => @survey.id)
-    elsif param[0][0] == "c"
+    elsif param[0].match(/choice*/)
       param[1].chomp.split("\r\n").each do |choice|
         Choice.create(:content => choice, :question_id => @current_question.id)
       end
-    else
-      return
     end
   end
-  {}.to_json
+  status 200
+  "/".to_json
 end
