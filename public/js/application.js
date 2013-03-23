@@ -15,13 +15,13 @@ $(document).ready(function() {
     })
   });
 
-  var lastQuestion = $('form div.question:last');
   var counter = 2;
 
   
 
   $('#add-question').on('click', function() {
-    $(lastQuestion).clone(true).hide().insertBefore(lastQuestion).slideDown();
+    var lastQuestion = $('form div.question:last'); 
+    $(lastQuestion).clone(true).hide().insertAfter(lastQuestion).slideDown();
     lastQuestion.attr('id', counter);
     counter += 1;
 
@@ -32,6 +32,13 @@ $(document).ready(function() {
         scrollTop: $(lastQuestion).offset().top + 'px'
       }, 'slow');
     })
+  });
+
+  $('a.remove').on('click', function(e) {
+    e.preventDefault();
+    $(this).closest('div').hide('slow', function() {
+      $(this).remove();
+    });
   });
 
 });

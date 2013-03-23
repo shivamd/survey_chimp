@@ -14,9 +14,9 @@ gem 'activesupport'
 gem 'activerecord'
 gem 'faker'
 gem 'rake'
-
+gem 'carrierwave'
 gem 'bcrypt-ruby'
-
+gem 'mini_magick'
 
 group :test do
   gem 'faker'

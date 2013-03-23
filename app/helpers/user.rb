@@ -1,12 +1,14 @@
 helpers do
 
- def login
+  def login
     @user = User.find_by_email(params[:email])
-    if @user.password == params[:password]
-      session[:id] = @user.id
-      redirect '/users/profile'
-    else
-      redirect '/users/login'
+    if @user
+      if @user.password == params[:password]
+        session[:id] = @user.id
+        redirect '/users/profile'
+      else
+        redirect '/users/login'
+      end
     end
   end
 

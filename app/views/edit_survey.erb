@@ -1,12 +1,13 @@
 <div class="survey-container">
   <div class="survey">
-    <h1>Create "<%= @survey.title %>"</h1>
+    <h1>Add questions to "<%= @survey.title %>"</h1>
+      <img src="<%= @survey.photo.name.url%>">   
 
     <div class="all-questions">
       <form action="#" method="post" class="<%= @survey.id %>" id="update">
 
         <div class="question" id="1">
-          <p>Question <a href="#">Remove</a></p>
+          <p>Question <a class="remove" href="#">Remove</a></p>
           <input type="text" name="question1" placeholder="Question" autofocus="autofocus"><br>
           <p>Choices</p>
           <textarea name="choice1" placeholder="Enter each choice on a different line" rows="7"></textarea><br>

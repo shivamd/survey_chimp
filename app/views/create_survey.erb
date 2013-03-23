@@ -1,7 +1,8 @@
 <h1> I Make New Survey! </h1>
-<form method="post" action "/survey/new">
-<input type="text" name="title" placeholder="Title"><br>
-<textarea name="description" placeholder="Description">
-</textarea><br>
-<input type="submit" value="I make survey">
+<form method="post" action "/survey/new" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Title"><br>
+  <textarea name="description" placeholder="Description"></textarea><br>
+  <p>Upload a photo (optional)</p>
+  <input type="file" name="filename">
+  <input type="submit" value="I make survey">
 </form>
