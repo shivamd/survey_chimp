@@ -12,7 +12,6 @@ get '/users/logout' do
 end
 
 get '/users/signup' do
-  # @user = User.new
   erb :signup
 end
 
