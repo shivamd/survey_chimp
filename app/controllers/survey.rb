@@ -3,21 +3,18 @@ get '/survey/new' do
 end
 
 post '/survey/new' do
-  @user = current_user
-  survey = Survey.new(params)
-  @user.surveys << survey
-  survey.save
-  redirect "/survey/#{survey.id}/edit"
+  create_survey(params)
+  redirect "/survey/#{@survey.id}/edit"
 end
 
 post '/survey/submit' do
   submit_answers(params)
-    # @user = User.find(session[:id])
   erb :submitted
 end
 
 get '/survey/:survey_id' do
-  @survey = Survey.where('id = ?', params[:survey_id]).includes(:questions => [:choices]).first
+  surveys = Survey.includes(:questions => [:choices])
+  @survey = surveys.find(params[:survey_id])
   erb :survey
 end
 
@@ -31,6 +28,7 @@ get '/survey/:survey_id/edit' do
   erb :edit_survey
 end
 
+### Can someone refactor this into a helper?
 post '/survey/:survey_id/edit' do
   content_type :json
   @survey = Survey.find(params[:survey_id])
