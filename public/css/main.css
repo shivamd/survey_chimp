@@ -74,9 +74,9 @@ header {
 }
 
 .inner button {
-  margin-right: 230px;
+  margin-right: 310px;
   background-color: #228b9b;
-  width: 28%;
+  width: 20%;
   height: 50px;
   border: 0;
   border-radius: 2px;
@@ -98,4 +98,9 @@ iframe {
 .outer {
   width: 80%;
   margin: 0 auto;
+}
+
+.radioleft{
+  text-align: left;
+  display: inline;
 }

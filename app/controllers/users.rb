@@ -27,5 +27,6 @@ end
 
 get '/users/profile' do
   @user = current_user
+  @surveys = @user.surveys
   erb :profile
 end
