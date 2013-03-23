@@ -16,12 +16,14 @@
   <title></title>
 </head>
 <body>
+  <div>  
     <%= erb :"partials/_nav" %>
+  </div>
   <div class="container">
     <%= yield %>
   </div>
+  <div>
+    <%= erb :"partials/_footer" %>
+  </div>
 </body>
-<footer>
-<small>Created by an awesome group of boots.</small>
-</footer>
 </html>

@@ -1,20 +1,107 @@
+/*Edit survey ================================================================*/
+
+.survey-container {
+  margin: auto;
+  width: 720px;
+  position: relative;
+}
+
+.survey {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+form div:first-child a {
+  display: none;
+}
+
+.all-questions {
+  border: 1px solid black;
+}
+
+.all-questions form {
+  text-align: left;
+}
+
+#submit-button {
+
+}
+
+.nav-add {
+  position: absolute;
+  right: 0;
+  top: 60px;
+}
+
+.nav-create {
+  position: absolute;
+  right: 0;
+  top: 135px;
+}
+
+.nav-create {
+  /*margin-top: 275px;  */
+}
+
+
+.floating-link {
+  display: block;
+  width: 130px;
+  height: 50px;
+  overflow: hidden;
+  color: white;
+  line-height:50px;
+  text-align: center;
+  text-decoration:none;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
+  background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
+  background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
+  background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
+  background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
+  background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+}
+
+/*Index page==================================================================*/
+
+nav#main {
+  padding: 20px 0px;
+}
+
 nav#main h1 {
   font-family: sans-serif;/*'Permanent Market'*/;
-  padding-left: 150px;
+  padding-left: 40px;
   font-size: 3em;
   color: #3F4944;
+  width: 100%;
+  display:inline;
+}
+
+nav#main ul {
+  display:inline;
+  float: right;
+  padding-right: 40px;
+}
+
+nav#main ul li {
+  display: inline;
 }
 
 .container {
-  /*width: 960px;*/
+  width: 100%;
+  min-height: 600px;
   margin: 0 auto;
-  
 }
 
 .landing {
   position: absolute;
   top: 100px;
-  padding: 40px;
+  padding: 40px 0px;
   width: 100%;
   background-color: #EFEDDF;
 
@@ -98,4 +185,12 @@ iframe {
 .outer {
   width: 80%;
   margin: 0 auto;
+}
+
+/*Footer======================================================================*/
+
+footer {
+  clear: both;
+  padding-top: 40px;
+  padding-left: 40px;
 }

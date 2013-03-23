@@ -1,31 +1,26 @@
-<h1>Edit "<%= @survey.title %>"</h1>
+<div class="survey-container">
+  <div class="survey">
+    <div class="nav-add floating-link"><a href="#" id="add-question">Add</a><br></div>
 
-<h2>Create your questions below:</h2>
-
-<div class="all-questions">
-  <form action="#" method="post" class="<%= @survey.id %>" id="update">
-    <div class="question" id="1">
-      <input type="text" name="question1" placeholder="Question"><br>
-      <p>Enter each choice on a different line</p>
-      <textarea name="choice1" placeholder="Enter choices" rows="7"></textarea><br>
-      <a href="#" id="question-1">Add question</a><br>
-    </div>
-
-    <div class="question" id="2">
-      <input type="text" name="question2" placeholder="Question"><br>
-      <p>Enter each choice on a different line</p>
-      <textarea name="choice2" placeholder="Enter choices" rows="7"></textarea><br>
-      <a href="#" id="question-1">Add question</a><br>
-    </div>
-
-    <div class="question" id="3">
-      <input type="text" name="question3" placeholder="Question"><br>
-      <p>Enter each choice on a different line</p>
-      <textarea name="choice3" placeholder="Enter choices" rows="7"></textarea><br>
-      <a href="#" id="question-1">Add question</a><br>
-    </div>
     
-    <input type="submit" value="Update"><br>
+  
 
-  </form>
+    <h1>Edit "<%= @survey.title %>"</h1>
+
+    <div class="all-questions">
+      <form action="#" method="post" class="<%= @survey.id %>" id="update">
+        
+        <input type="submit" value="Create Survey" class="nav-create floating-link" id="create-survey">
+
+        <div class="question" id="1">
+          <p>Question</p>
+          <input type="text" name="question1" placeholder="Question" autofocus="autofocus"><br>
+          <p>Choices</p>
+          <textarea name="choice1" placeholder="Enter each choice on a different line" rows="7"></textarea><br>
+          <a href="#">Remove</a>
+        </div>
+        
+      </form>
+    </div>
+  </div>
 </div>
