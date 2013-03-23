@@ -7,19 +7,20 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+
 
   <title></title>
 </head>
 <body>
-  <a href="/">Home</a>
-<% if session[:id] %>
-  <a href="/users/logout">Logout</a>
-<% else %> 
-  <a href="/users/login">Login</a>
-<% end %>
-<a href="/users/signup">Signup</a>
+    <%= erb :"partials/_nav" %>
   <div class="container">
     <%= yield %>
   </div>
 </body>
+<footer>
+<small>Created by an awesome group of boots.</small>
+</footer>
 </html>

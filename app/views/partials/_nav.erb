@@ -1,0 +1,12 @@
+<nav id="main">
+  <h1>Survey Monkey</h1>
+  <ul>
+      <li><a href="/">Home</a></li>
+    <% if session[:id] %>
+      <li><a href="/users/logout">Logout</a></li>
+    <% else %> 
+      <li><a href="/users/login">Login</a></li>
+    <%end %>
+      <li><a href="/users/signup">Signup</a> </li>
+  </ul>
+</nav>
