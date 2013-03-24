@@ -4,7 +4,10 @@
   </div>
   <div class="right-nav">
     <div class="avatar">
-      <% unless @user.photos ==[] %><a href="/users/profile"><img src="<%= @user.photos.last.name.avatar.url %>"></a><% end %>
+      <% if @user %>
+        <% unless @user.photos ==[] %><a href="/users/profile"><img src="<%= @user.photos.last.name.avatar.url %>"></a>
+        <% end %>
+      <% end %>
     </div>
 
     <div class="links">
@@ -13,9 +16,8 @@
           <li><a href="/users/profile">profile</a></li>
           <li><a href="/users/logout">logout</a></li>
         <% else %> 
-          <li><a href="/">Home</a></li>
-          <li><a href="/users/login">Login</a></li>
-          <li><a href="/users/signup">Signup</a> </li>
+          <li><a href="/users/login">login</a></li>
+          <li><a href="/users/signup">signup</a> </li>
         <%end %>
       </ul>
     </div>
