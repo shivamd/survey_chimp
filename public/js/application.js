@@ -21,6 +21,8 @@ $(document).ready(function() {
     var lastQuestion = $('form div.question:last'); 
     $(lastQuestion).clone(true).hide().insertAfter(lastQuestion).slideDown();
     lastQuestion.attr('id', counter);
+    lastQuestion.children('input').attr('name', 'question' + counter);
+    lastQuestion.children('textarea').attr('name', 'choice' + counter);
     counter += 1;
 
     $('div#'+counter+ ' input').focus();
