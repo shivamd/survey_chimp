@@ -41,12 +41,13 @@ form input.button:hover{
   text-align: center;
 }
 
-.profile-stats table {
-  margin: auto;
+.profile-stats {
+  margin-bottom: 20px;
 }
 
 .profile-stats table {
   text-align: left;
+  margin: auto;
 }
 
 .profile-stats table th, .profile-stats table td {
