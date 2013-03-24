@@ -39,4 +39,39 @@ $(document).ready(function() {
     });
   });
 
+
+
+// Bar Graph Stuff
+
+  // arrayOfData = new Array(
+  //      ["10.3",'Jan','#f3f3f3'],
+  //      ["15.2",'Feb','#f4f4f4'],
+  //      ["13.1",'Mar','#cccccc'],
+  //      ["16.3",'Apr','#333333'],
+  //      ["14.5",'May','#666666']
+  // ); 
+
+// make graph go away when clicked again
+
+$('a.graph-button').on('click', function(e){
+  e.preventDefault();
+  var dataArray = new Array();
+
+
+  dataArray.push( $(this).parent().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+
+  (dataArray[0]).push('#f3f3f3');
+  (dataArray[1]).push('#f3f3f3');
+  (dataArray[2]).push('#f3f3f3');
+  (dataArray[3]).push('#f3f3f3');
+
+  $('#graphdiv').jqBarGraph({ data: dataArray });
+});
+
+
+// $('#graphdiv').jqBarGraph({ data: arrayOfData }); 
+
 });
