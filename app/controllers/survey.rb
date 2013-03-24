@@ -5,9 +5,9 @@ end
 post '/survey/new' do
   survey = create_survey(title: params[:title], description: params[:description])
   
-  # File.open('public/images/' + params['filename'][:filename], "w") do |f|
-  #   f.write(params['filename'][:tempfile].read)
-  # end
+  File.open('public/images/' + params['filename'][:filename], "w") do |f|
+    f.write(params['filename'][:tempfile].read)
+  end
   survey.photo = Photo.create(name: params[:filename])
   redirect "/survey/#{@survey.id}/edit"
 end
