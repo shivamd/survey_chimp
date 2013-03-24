@@ -420,3 +420,10 @@ footer small {
   right: 37%;
   top: 125%;
 }
+
+
+div.handle {
+  background: url("/images/handle.png");
+  width: 16px;
+  height: 16px;
+}

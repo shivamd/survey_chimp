@@ -94,4 +94,9 @@ $('a.graph-button').on('click', function(e){
 
 // $('#graphdiv').jqBarGraph({ data: arrayOfData }); 
 
+
+// sorting questions
+
+$('form#update').sortable({handle: ".handle"}).disableSelection();
+
 });
