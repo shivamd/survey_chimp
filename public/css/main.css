@@ -32,6 +32,12 @@ form input.button:hover{
 
 .bottom-profile {
   text-align: center;
+  background-color: #efeddf;
+  margin-bottom: -30px;
+
+} 
+.profile-stats h1 {
+  margin-top: 0;
 }
 
 .profile h1, .profile-stats h1 {
