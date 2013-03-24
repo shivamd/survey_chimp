@@ -21,22 +21,27 @@
       <h1>Your surveys</h1>
       <a href="/survey/new" class="profile-button">create new survey</a>
       <div>
-      <BR><BR>
-      <table>
-        <tr>
-          <th>Survey name</th>
-          <th>Created on</th>
-          <th>Stats</th>
-        </tr>
-        <% @surveys.each do |survey| %>
-        <tr>
-          <td><a href="/survey/<%= survey.id %>"><%= survey.title %></a></td>
-          <td><%= survey.created_at.strftime('%B %d, %Y') %></td>
-          <td><a href="/survey/<%= survey.id %>/stats">Link</a></li></td>
-        </tr>
-        <%end%>
-      </table>
-    </div>
+        <BR><BR>
+        
+        <% if @user.surveys == [] %> 
+          <p>You have no surveys - create some!</p>
+        <% else %>
+        <table>
+          <tr>
+            <th>Survey name</th>
+            <th>Created on</th>
+            <th>Stats</th>
+          </tr>
+          <% @surveys.each do |survey| %>
+          <tr>
+            <td><a href="/survey/<%= survey.id %>"><%= survey.title %></a></td>
+            <td><%= survey.created_at.strftime('%B %d, %Y') %></td>
+            <td><a href="/survey/<%= survey.id %>/stats">Link</a></li></td>
+          </tr>
+          <%end%>
+        </table>
+        <% end %>
+      </div>
     </div>
   </div> 
 </div>
