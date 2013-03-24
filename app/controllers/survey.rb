@@ -61,3 +61,8 @@ post '/survey/:survey_id/edit' do
   status 200
   "/users/profile".to_json
 end
+
+delete '/survey/:survey_id' do 
+  Survey.find(params[:survey_id]).delete
+  redirect '/users/profile'
+end

@@ -36,7 +36,12 @@
           <tr>
             <td><a href="/survey/<%= survey.id %>"><%= survey.title %></a></td>
             <td><%= survey.created_at.strftime('%B %d, %Y') %></td>
-            <td><a href="/survey/<%= survey.id %>/stats">Link</a></li></td>
+            <td><a href="/survey/<%= survey.id %>/stats">Link</a>
+            <td><form action="/survey/<%= survey.id %>" method="post"><input type="hidden" name="_method" value="delete">
+              <input type="submit" value="delete survey">
+            </form></td>
+
+            </li></td>
           </tr>
           <%end%>
         </table>
