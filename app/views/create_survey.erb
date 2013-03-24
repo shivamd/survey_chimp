@@ -1,8 +1,16 @@
-<h1> I Make New Survey! </h1>
-<form method="post" action "/survey/new" enctype="multipart/form-data">
-  <input type="text" name="title" placeholder="Title"><br>
-  <textarea name="description" placeholder="Description"></textarea><br>
-  <p>Upload a photo (optional)</p>
-  <input type="file" name="filename">
-  <input type="submit" value="I make survey">
-</form>
+<div class="profile-container">
+  <div class="profile">
+    <h1>Create a new survey</h1>
+    
+    <div class="picture">
+      <form method="post" action "/survey/new" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Title" class="title"><BR><BR>
+        <textarea name="description" rows="7" placeholder="Description" style="text-align: center"></textarea><br>
+        <p>Upload a photo (optional)</p>
+        <input type="file" name="filename"><BR><BR>
+        <input type="submit" value="make survey" class="button">
+        <p><%= @errors %></p>
+      </form>
+    </div>
+  </div>
+</div>

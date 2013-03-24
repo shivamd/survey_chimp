@@ -1,3 +1,22 @@
+/*Create survey===============================================================*/
+
+form input.button {
+  background-color: #228b9b;
+  width: 200px;
+  height: 40px;
+  border-radius: 2px;
+  padding: 10px;
+  color: white;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1.3m;
+}
+
+form input.button:hover{
+  background-color: #296A7A;
+}
+
 /*Profile page================================================================*/
 
 .profile-container {
