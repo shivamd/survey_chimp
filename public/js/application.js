@@ -65,18 +65,28 @@ $('a.graph-button').on('click', function(e){
   var dataArray = new Array();
   var choiceArray = $(this).parent().parent().find('li')
   var choiceCount = $.each(choiceArray,function(index,value){ i += 1 });
+  var choiceList = $(this).parent().parent().children();
 
 
-  dataArray.push( $(this).parent().prev().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
-  dataArray.push( $(this).parent().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
-  dataArray.push( $(this).parent().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
-  dataArray.push( $(this).parent().prev().children().text().split(" ").join(",").split(",").reverse() );
+  // choiceList.each(function(index, list){
+  //   dataArray.push( list.text().split(" ").join(",").split(",").reverse() );
+  // });
+
+  var rawData = $(this).parent().parent().children().children().text();
+  var data = rawData.split(" ");
+
+  //jquery includes text in a href to the array. remove it
+  data.splice(data.length-3, 4);
+  
+  $.each(data, function(index,value){dataArray.push(value.split("-").join(",").split(",").reverse())})
 
   $.each(dataArray, function(index, value){
     value.push(barColors.randomElement());
   });
 
-  $('#graphdiv').jqBarGraph({ data: dataArray });
+  //append graph
+  var currentQuestion = $(this).attr("id");
+  $(".question_" + currentQuestion).jqBarGraph({ data: dataArray });
 });
 
 
