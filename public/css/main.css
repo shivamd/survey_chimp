@@ -289,6 +289,11 @@ nav#main ul li a:hover {
   padding-bottom: 10px;
   font-size: 3.5em;
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  /*width:700px;*/
+  /*margin-left: 280px;*/
+  /*margin-right: 0;*/
+  /*padding-right: 0;*/
+  /*display: inline-block;*/
 }
 
 .landing h4 {
@@ -433,3 +438,69 @@ div.handle {
   width: 16px;
   height: 16px;
 }
+
+
+/* Drop down forms*/
+
+li form input {
+  display: block;
+}
+
+.links ul li {
+  position: relative;
+}
+
+form.dropdown{
+  background-color:  #7c7c82;
+  padding:0px;
+  position: absolute;
+  display: none;
+  border-radius: 7px;
+  border: 2px solid #7c7c82;
+}
+
+form.dropdown.login {
+  right: 11%;
+  bottom: 88%;
+}
+
+form.dropdown input {
+  display: block;
+  padding: 9px;  
+  border: solid 1px #E5E5E5;  
+  outline: 0;  
+  font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+  width: 200px;  
+  background: #FFFFFF; 
+}
+
+form.dropdown input:first-child {
+  border-radius: 7px 7px 0px 0px;
+}
+
+
+
+
+form.dropdown input[type=submit] {
+  width: 220px;
+  background-color: #00a7a7;
+  color:white;
+  font-variant: small-caps;
+  border-radius: 0px 0px 7px 7px ;
+  border: none;
+}
+
+form.dropdown.signup {
+  right:8%;
+  bottom: 83%;
+}
+
+form.dropdown input:hover, form.dropdown input:focus {   
+    border-color: #efeddf;   
+}  
+
+.space {
+  margin-top: 60px;
+  /*position: absolute;*/
+}
+

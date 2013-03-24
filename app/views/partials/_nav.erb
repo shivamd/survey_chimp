@@ -16,8 +16,12 @@
           <li><a href="/users/profile">profile</a></li>
           <li><a href="/users/logout">logout</a></li>
         <% else %> 
-          <li><a href="/users/login">login</a></li>
-          <li><a href="/users/signup">signup</a> </li>
+          <li><a class="dropdown" id="login" href="/users/login">login</a>
+              
+          </li>
+          <li>
+                <a class="dropdown" id="signup" href="/users/signup">signup</a>
+           </li>
         <%end %>
       </ul>
     </div>

@@ -99,4 +99,25 @@ $('a.graph-button').on('click', function(e){
 
 $('form#update').sortable({handle: ".handle"}).disableSelection();
 
+
+// dropdown menu
+
+$('li a.dropdown').on('click', function(e) {
+  e.preventDefault();
+  dropdown = $(this).attr('id');
+  $('header').toggleClass('space');
+  if (dropdown=== "login") {
+    $('form.signup').hide();
+  }
+  else {
+    $('form.login').hide();
+  }
+  $('form.'+dropdown).toggle();
+});
+  
+  $('.landing').on('click', function(e) {
+    $('header').removeClass('space');
+    $('form.dropdown').hide();
+  });
+
 });
