@@ -1,3 +1,5 @@
+<%= erb :"partials/_errors", layout: false, locals: { errors: @errors } %>
+
 <form action="/users/login" method="post">
   <input type="email" name="email" placeholder="email">
   <input type="password" name="password" placeholder="password"> 
