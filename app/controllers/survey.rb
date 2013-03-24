@@ -8,8 +8,19 @@ post '/survey/new' do
   File.open('public/images/' + params['filename'][:filename], "w") do |f|
     f.write(params['filename'][:tempfile].read)
   end
-  survey.photo = Photo.create(name: params[:filename])
-  redirect "/survey/#{@survey.id}/edit"
+
+  if params[:title] == "" || params[:description] == ""
+    @errors = "Yo man... you can't create a blank survey! Please add a title and a description."
+    erb :create_survey
+  else
+    survey = create_survey(title: params[:title], description: params[:description])
+    
+    # File.open('public/images/' + params['filename'][:filename], "w") do |f|
+    #   f.write(params['filename'][:tempfile].read)
+    # end
+    survey.photo = Photo.create(name: params[:filename])
+    redirect "/survey/#{@survey.id}/edit"
+  end
 end
 
 post '/survey/submit' do
