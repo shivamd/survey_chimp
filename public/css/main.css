@@ -1,3 +1,75 @@
+/*Profile page================================================================*/
+
+.profile-container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.profile {
+  background-color: #EFEDDF;
+  padding: 20px 0;
+}
+
+.bottom-profile {
+  text-align: center;
+}
+
+.profile h1, .profile-stats h1 {
+  font-size: 2em;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  color: #3F4944;
+  text-align: center;
+}
+
+.profile-stats table {
+  margin: auto;
+}
+
+.profile-stats table {
+  text-align: left;
+}
+
+.profile-stats table th, .profile-stats table td {
+  padding: 5px;
+}
+
+.picture {
+  text-align: center;
+}
+
+.picture form {
+  margin: auto;
+}
+
+.picture form input {
+  text-align: center;
+  width: 200px;
+  overflow:hidden;
+}
+
+a.profile-button {
+  background-color: #228b9b;
+  width: 200px;
+  height: 100px;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+a.profile-button {
+  text-decoration: none;
+  color: white;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1.3em;
+}
+
+a.profile-button:hover{
+  background-color: #296A7A;
+}
+
+
 /*Edit survey ================================================================*/
 
 .survey-container {
@@ -124,15 +196,27 @@ nav#main .logo {
   float: left;
   width: 400px;
   height: 60px;
-  display:inline;
+  display:block;
 }
 
+nav#main .right-nav {
+  float: right;
+}
+
+nav#main .avatar {
+  float: left;
+}
+
+nav#main .links {
+  float: left;
+}
 
 nav#main ul {
   display:inline;
   float: right;
   padding-right: 40px;
   margin-right:70px;
+  padding-left: 20px;
 }
 
 nav#main ul li {

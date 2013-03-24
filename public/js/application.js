@@ -17,8 +17,6 @@ $(document).ready(function() {
 
   var counter = 2;
 
-  
-
   $('#add-question').on('click', function() {
     var lastQuestion = $('form div.question:last'); 
     $(lastQuestion).clone(true).hide().insertAfter(lastQuestion).slideDown();

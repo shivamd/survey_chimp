@@ -1,10 +1,43 @@
-<h1> Wasssssuuuuppppp!!! <%= @user.username%> </h1>
+<div class="profile-container">
+  <div class="profile">
+    <h1>Wassup <%= @user.username%>?!</h1>
 
-<ul>
-  <% @surveys.each do |survey| %>
-  <li><a href="/survey/<%= survey.id %>"><%= survey.title %></a>--- 
-    <a href="/survey/<%= survey.id %>/stats">Stats</a></li>
-  <%end%>
-</ul>
+    <div class="picture">
+      <% if @user.photos == [] %> 
+        <img src="/images/chimp.jpg">
+      <% else %>
+        <img src="<%= @user.photos.last.name.profile.url%>">
+      <% end %>
 
-<button><a href="/survey/new">Create New Survey!</button>
+      <form method="post" action="/user/new/photo" enctype="multipart/form-data">
+        <p><input type="file" name="filename"></p>
+        <p><input type="submit" value="Upload Profile Pic"><p>
+      </form>
+    </div>
+  </div>
+
+  <div class="bottom-profile">
+    <div class="profile-stats">
+      <h1>Your surveys</h1>
+      <a href="/survey/new" class="profile-button">create new survey</a>
+      <div>
+      <BR><BR>
+      <table>
+        <tr>
+          <th>Survey name</th>
+          <th>Created on</th>
+          <th>Stats</th>
+        </tr>
+        <% @surveys.each do |survey| %>
+        <tr>
+          <td><a href="/survey/<%= survey.id %>"><%= survey.title %></a></td>
+          <td><%= survey.created_at.strftime('%B %d, %Y') %></td>
+          <td><a href="/survey/<%= survey.id %>/stats">Link</a></li></td>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+    </div>
+  </div> 
+</div>
+

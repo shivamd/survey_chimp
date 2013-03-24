@@ -30,3 +30,9 @@ get '/users/profile' do
   @surveys = @user.surveys
   erb :profile
 end
+
+post '/user/new/photo' do
+  @user.photos << Photo.create(name: params[:filename])
+  @surveys = @user.surveys
+  erb :profile
+end

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_one :photo
+  has_many :photos
   has_many :surveys
   has_many :answers
   has_many :choices, :through => :answers
