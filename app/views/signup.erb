@@ -1,3 +1,5 @@
+<%= erb :"partials/_errors", layout: false, locals: { errors: @errors } %>
+
 <form action="/users/signup" method="post" class="signup">
   <input type="text" name="username" placeholder="Username">
   <input type="email" name="email"  placeholder="Email">
@@ -5,10 +7,4 @@
   <input type="submit" value="Signup!">
 </form>
 
-<% if @errors %>
-  <ul class="error-list">
-    <% @errors.each do |error| %>
-    <li><%= error %></li>
-    <%end%>
-  </ul>
-<%end%>
+
