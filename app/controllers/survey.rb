@@ -4,10 +4,11 @@ end
 
 post '/survey/new' do
   survey = create_survey(title: params[:title], description: params[:description])
-  
-  File.open('public/images/' + params['filename'][:filename], "w") do |f|
-    f.write(params['filename'][:tempfile].read)
-  end
+    unless params['filename'].nil?
+      File.open('public/images/' + params['filename'][:filename], "w") do |f|
+        f.write(params['filename'][:tempfile].read)
+      end
+    end
 
   if params[:title] == "" || params[:description] == ""
     @errors = "Yo man... you can't create a blank survey! Please add a title and a description."
