@@ -43,6 +43,11 @@ $(document).ready(function() {
 
 // Bar Graph Stuff
 
+
+Array.prototype.randomElement = function () {
+    return this[Math.floor(Math.random() * this.length)]
+  };
+
   // arrayOfData = new Array(
   //      ["10.3",'Jan','#f3f3f3'],
   //      ["15.2",'Feb','#f4f4f4'],
@@ -55,18 +60,21 @@ $(document).ready(function() {
 
 $('a.graph-button').on('click', function(e){
   e.preventDefault();
+  var i = 0
+  var barColors = ["#4210AE", "#D5F800", "#8BA100", "#FFE4C4", '#8B0000', '#4B0082', '#FF6347']
   var dataArray = new Array();
+  var choiceArray = $(this).parent().parent().find('li')
+  var choiceCount = $.each(choiceArray,function(index,value){ i += 1 });
 
 
-  dataArray.push( $(this).parent().prev().children().text().split(" ").join(",").split(",").reverse() );
-  dataArray.push( $(this).parent().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
-  dataArray.push( $(this).parent().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
   dataArray.push( $(this).parent().prev().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().prev().children().text().split(" ").join(",").split(",").reverse() );
+  dataArray.push( $(this).parent().prev().children().text().split(" ").join(",").split(",").reverse() );
 
-  (dataArray[0]).push('#f3f3f3');
-  (dataArray[1]).push('#f3f3f3');
-  (dataArray[2]).push('#f3f3f3');
-  (dataArray[3]).push('#f3f3f3');
+  $.each(dataArray, function(index, value){
+    value.push(barColors.randomElement());
+  });
 
   $('#graphdiv').jqBarGraph({ data: dataArray });
 });
