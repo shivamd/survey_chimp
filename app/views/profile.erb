@@ -4,7 +4,7 @@
 
     <div class="picture">
       <% if @user.photos == [] %> 
-        <img src="/images/chimp.jpg">
+        <img src="/assets/chimp.jpg">
       <% else %>
         <img src="<%= @user.photos.last.name.profile.url%>">
       <% end %>
