@@ -1,34 +1,40 @@
 <div class="landing">
   <form id="login" class="dropdown login" action="/users/login" method="post">
-                <input type="email" name="email" placeholder="email">
-                <input type="password" name="password" placeholder="password"> 
-               <input type="submit" value="login">
-    </form>
+    <input type="email" name="email" placeholder="email">
+    <input type="password" name="password" placeholder="password"> 
+    <input type="submit" value="login">
+  </form>
 
-     <form id="signup" class="dropdown signup"action="/users/signup" method="post" class="signup">
-                  <input type="text" name="username" placeholder="username">
-                  <input type="email" name="email"  placeholder="email">
-                  <input type="password" name="password" placeholder="password">
-                  <input type="submit" value="signup">
-                </form>
+  <form id="signup" class="dropdown signup"action="/users/signup" method="post" class="signup">
+    <input type="text" name="username" placeholder="username">
+    <input type="email" name="email"  placeholder="email">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="signup">
+  </form>
+
   <div class="outer">
     <ul id="errors">
       <% if @errors %>
       <li><%= @errors %></li>
       <% end %>
     </ul>
-  <header>
-    <h2>Create your own survey</h2>
-    <h4>No setup. No hassle. Just clean surveys.</h4>
-    <div class="inner">
-    <iframe width="450" height="253" src="http://www.youtube.com/embed/qFYTjbDA6z4?rel=0" frameborder="0" allowfullscreen></iframe>
+  
+    <header>
+      <h2>Create your own survey</h2>
+      <h4>No setup. No hassle. Just clean surveys.</h4>
+      <div class="inner">
+        
+        <div class="video">
+          <iframe width="450" height="253" src="http://www.youtube.com/embed/qFYTjbDA6z4?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-      <section>
-        <p class="right">Survey Chimp allows you to create detailed surveys, send them out, and receive instant feedback.</p>
-        <button class="right"><a href="/users/signup">create free account</a></button>
-      </section>
-    </div>
-  </header>
+        <div class="text-side">
+          <div class="index-text">Survey Chimp allows you to create detailed surveys, send them out, and receive instant feedback.</div><BR><BR>
+          <div><button class="right"><a href="/users/signup">create free account</a></button></div>
+        </div>
+
+      </div>
+    </header>
   </div>
 </div>
 

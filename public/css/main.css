@@ -312,46 +312,50 @@ nav#main ul li a:hover {
   margin-bottom: 30px;
 }
 
-
-/*.landing p {
-  color: #7C7C7F;
-  width: 30%;
-  font-size: 1.5em;
-  margin-left: 400px;
-}*/
-
-
 header {
   position: relative;
+  text-align: center;
 }
 
 .inner {
-  display: block;
+  display: inline-block;
   position: relative;
+  width: 900px;
 }
 
-.inner p {
+.inner div.video {
+  float: left;
+  width: 450px;
+}
+
+.inner div.text-side {
+  float: left;
+  width: 450px;
+}
+
+
+.inner div p {
   color: #7C7C7F;
   width: 30%;
   font-size: 1.5em;
   padding-top: 30px;
-  padding-right: 200px;
+}
+
+.inner div.text-side div.index-text {
+  color: #7C7C7F;
+  font-size: 1.5em;
+  padding-top: 50px;
 }
 
 .inner iframe {
-  float: left;
+  float: right;
   padding-left:3%;
   margin-right: 4%;
 }
 
-.right {
-  float:right;
-}
-
 button {
-  margin-right: 310px;
   background-color: #228b9b;
-  width: 20%;
+  /*width: 20%;*/
   height: 50px;
   border: 0;
   border-radius: 2px;
@@ -373,7 +377,6 @@ button:hover{
 iframe {
   padding-top: 30px;
 }
-
 
 .outer {
   width: 80%;
@@ -494,9 +497,6 @@ form.dropdown input {
 form.dropdown input:first-child {
   border-radius: 7px 7px 0px 0px;
 }
-
-
-
 
 form.dropdown input[type=submit] {
   width: 220px;
