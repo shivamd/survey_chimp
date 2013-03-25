@@ -1,22 +1,27 @@
-<% question_counter = 1 %>
-<% @survey.questions.each do |question| %>
-<div>
-  <h2><%= question.content %></h2> <small>Times answered(<%= question_count(question)%>)</small><br>
-  <div>
-  <ul>
-    <% question.choices.each do |choice| %>
-    <li>
-      <span><%= choice.content %>-</span>  <span><%=((choice.answers.count / question_count(question).to_f)* 100).round(2)%> </span> %
-    </li>
-    <% end %>
-    <li><a href="#" class="graph-button" id="<%=question_counter%>"> Show Graph</a></li>
-  <ul>
-  </div>
-  <div class="question_<%=question_counter%>"> 
+<div class="profile-container">
+  <div class="profile">
+    <div class="fill-out-survey">
+      <% question_counter = 1 %>
+      <% @survey.questions.each do |question| %>
+      <div>
+        <h2><%= question.content %></h2> <small>Times answered: <%= question_count(question)%></small><br>
+        <div>
+        <ul>
+          <% question.choices.each do |choice| %>
+          <li>
+            <span><%= choice.content %>-</span>  <span><%=((choice.answers.count / question_count(question).to_f)* 100).round(2)%> </span> %
+          </li>
+          <% end %>
+          <li><a href="#" class="graph-button" id="<%=question_counter%>"> Show Graph</a></li>
+        <ul>
+        </div>
+        <div class="question_<%=question_counter%>"> 
+        </div>
+      </div>
+
+      <% question_counter += 1 %>
+
+      <% end %>
+    </div>
   </div>
 </div>
-
-<% question_counter += 1 %>
-
-<% end %>
-

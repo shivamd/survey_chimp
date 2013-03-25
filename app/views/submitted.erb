@@ -1,6 +1,13 @@
-<h1>Chimp thanks you for taking Survey!</h1>
-<% if @user %> 
-  <a href="/users/profile">Go back to your profile!</a>
-<% else %>
-  Wanna Sign up to this awesome website? Click <a href="/users/signup">here</a>
-<% end %>
+<div class="profile-container">
+  <div class="profile">
+    <h1>OOH AH AH! The chimp thanks you!</h1>
+    <div class="picture">
+      <img src="/images/chimp.jpg">
+      <% if @user %> 
+        <div><a href="/users/profile">Go back to your profile!</a></div>
+      <% else %>
+        <div>Wanna Sign up to this awesome website? Click <a href="/users/signup">here</a></div>
+      <% end %>
+    </div>
+  </div>
+</div>

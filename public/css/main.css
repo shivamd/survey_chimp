@@ -1,3 +1,10 @@
+/*Take surevey================================================================*/
+
+.fill-out-survey {
+  width: 720px;
+  margin: auto;
+}
+
 /*Create survey===============================================================*/
 
 form input.button {
@@ -21,8 +28,10 @@ form input.button:hover{
 
 .profile-container {
   width: 100%;
+  min-height: 600px;
   margin: auto;
   position: relative;
+  background-color: #EFEDDF;
 }
 
 .profile {
@@ -48,7 +57,7 @@ form input.button:hover{
 }
 
 .profile-stats {
-  margin-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .profile-stats table {
@@ -164,6 +173,7 @@ form div:first-child a {
 .all-questions {
   border: 1px solid black;
   padding: 0 15px 15px 15px;
+  margin-bottom: 50px;
   background-color: #EFEDDF;
   position: relative;
 }

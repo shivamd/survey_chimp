@@ -1,12 +1,18 @@
-<h1><%= @survey.title %></h1>
+<div class="profile-container">
+  <div class="profile">
+    <h1><%= @survey.title %></h1>
 
-<h3>Questions</h3>
-<form action="/survey/submit" method="post">
-  <% @survey.questions.each do |question| %>
-    <label for="<%= question.id %>"><p><%= question.content %></p></label><br>
-    <% question.choices.each do |choice| %>
-      <input type="radio" name="<%= question.id  %>" value="<%= choice.content %>"> <%= choice.content %><br>
-    <% end %>
-  <% end %>
-  <input type="submit" value="I done survey!">
-</form>
+    <div class="fill-out-survey">
+      <form action="/survey/submit" method="post">
+        <% @survey.questions.each do |question| %>
+          <strong><label for="<%= question.id %>"><p><%= question.content %></p></label></strong>
+          <% question.choices.each do |choice| %>
+            <input type="radio" name="<%= question.id  %>" value="<%= choice.content %>"> <%= choice.content %><br><br>
+          <% end %>
+        <% end %>
+        <BR>
+        <input type="submit" value="submit survey" class="button">
+      </form>
+    </div>
+  </div>
+</div>
