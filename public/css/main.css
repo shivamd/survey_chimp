@@ -283,7 +283,7 @@ nav#main ul li a:hover {
 .landing {
   position: absolute;
   top: 100px;
-  padding: 40px 0px;
+  padding: 80px 0px;
   width: 100%;
   background-color: #EFEDDF;
   padding-bottom: 125px;
@@ -315,6 +315,12 @@ nav#main ul li a:hover {
 header {
   position: relative;
   text-align: center;
+}
+
+.outer {
+  padding-top: -30px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .inner {
@@ -378,14 +384,6 @@ iframe {
   padding-top: 30px;
 }
 
-.outer {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/*Footer======================================================================*/
-
-
 /* Drop down forms*/
 
 li form input {
@@ -403,11 +401,17 @@ form.dropdown{
   display: none;
   border-radius: 7px;
   border: 2px solid #7c7c82;
+  z-index: 10000;
 }
 
 form.dropdown.login {
-  right: 11%;
+  right: 13%;
   bottom: 88%;
+}
+
+form.dropdown.signup {
+  right:8%;
+  bottom: 83%;
 }
 
 form.dropdown input {
@@ -433,17 +437,12 @@ form.dropdown input[type=submit] {
   border: none;
 }
 
-form.dropdown.signup {
-  right:8%;
-  bottom: 83%;
-}
-
 form.dropdown input:hover, form.dropdown input:focus {   
     border-color: #efeddf;   
 }  
 
-.space {
+/*.space {
   margin-top: 60px;
-  /*position: absolute;*/
+  position: absolute;
 }
-
+*/

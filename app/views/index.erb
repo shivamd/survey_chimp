@@ -1,5 +1,5 @@
 <div class="landing">
-  <form id="login" class="dropdown login" action="/users/login" method="post">
+     <form id="login" class="dropdown login" action="/users/login" method="post">
     <input type="email" name="email" placeholder="email">
     <input type="password" name="password" placeholder="password"> 
     <input type="submit" value="login">
@@ -12,7 +12,10 @@
     <input type="submit" value="signup">
   </form>
 
+
   <div class="outer">
+
+
     <ul id="errors">
       <% if @errors %>
       <li><%= @errors %></li>
@@ -20,6 +23,7 @@
     </ul>
   
     <header>
+
       <h2>Create your own survey</h2>
       <h4>No setup. No hassle. Just clean surveys.</h4>
       <div class="inner">
