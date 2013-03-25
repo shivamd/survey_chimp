@@ -6,8 +6,8 @@ helpers do
         session[:id] = @user.id
         redirect '/users/profile'
       else
-        @errors = ["Invalid Password/Email combination"]
-        erb :login
+        @errors = "Invalid Password/Email combination"
+        erb :index
       end
   end
 
