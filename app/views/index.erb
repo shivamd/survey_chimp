@@ -1,17 +1,22 @@
 <div class="landing">
-  <form class="dropdown login" action="/users/login" method="post">
+  <form id="login" class="dropdown login" action="/users/login" method="post">
                 <input type="email" name="email" placeholder="email">
                 <input type="password" name="password" placeholder="password"> 
                <input type="submit" value="login">
     </form>
 
-     <form class="dropdown signup"action="/users/signup" method="post" class="signup">
+     <form id="signup" class="dropdown signup"action="/users/signup" method="post" class="signup">
                   <input type="text" name="username" placeholder="username">
                   <input type="email" name="email"  placeholder="email">
                   <input type="password" name="password" placeholder="password">
                   <input type="submit" value="signup">
                 </form>
   <div class="outer">
+    <ul id="errors">
+      <% if @errors %>
+      <li><%= @errors %></li>
+      <% end %>
+    </ul>
   <header>
     <h2>Create your own survey</h2>
     <h4>No setup. No hassle. Just clean surveys.</h4>

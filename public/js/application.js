@@ -115,7 +115,7 @@ $('li a.dropdown').on('click', function(e) {
   $('form.'+dropdown).toggle();
 });
   
-  $('.landing').on('click', function(e) {
+  $('.outer').on('click', function(e) {
     $('header').removeClass('space');
     $('form.dropdown').hide();
   });
