@@ -1,4 +1,4 @@
 get '/' do
-  # Look in app/views/index.erb
+  @home_footer = true
   erb :index
 end

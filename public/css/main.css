@@ -385,8 +385,24 @@ iframe {
 
 /*Footer======================================================================*/
 
+.short-footer {
+  height: 100px;
+  display: block;
+}
 
-/* Drop down forms*/
+.short-founders {
+  height: 150px;
+  float: left;
+  margin-left: 40px;
+}
+
+.short-footy-foots {
+  float: left;
+  margin-top: 27px;
+  margin-left: 40px;
+}
+
+/* Drop down forms============================================================*/
 
 li form input {
   display: block;

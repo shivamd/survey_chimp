@@ -25,7 +25,11 @@
       <%= yield %>
     </div>
     <div>
-      <%= erb :"partials/_footer" %>
+      <% if @home_footer %>
+        <%= erb :"partials/_footer" %>
+      <% else %>
+        <%= erb :"partials/_footer_short" %>
+      <% end %>
     </div>
   </body>
 </html>
